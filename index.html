@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js" defer></script>
+        <title>Library</title>
+    </head>
+    <body>
+        <div id="header">
+            <div id="logo">
+                MY BOOKS
+            </div>
+        </div>
+        <div id="main-section">
+            <div id="books">
+                <div id="read-container">
+                    <div class="section-header">
+                        Read
+                    </div>
+                    <hr>
+                    <div class="cards-container">
+                    </div>
+                </div>
+                <div id="want-container">
+                    <div class="section-header">
+                        Want to Read
+                    </div>
+                    <hr>
+                    <div class="cards-container">
+                    </div>
+                </div>
+            </div>
+            <div id="add-book">
+                <div id="input-field">
+                    <form action="#" method="get">
+                        <input type="text" id="title" placeholder="Title*" required>
+                        <input type="text" id="author" placeholder="Author*" required>
+                        <input type="number" id="pages" placeholder="Pages*" required>
+                        <div id="status-container">
+                            <div>
+                                <input type="checkbox" id="status" name="status" value="read">
+                                <label for="read">Finished reading</label>
+                            </div>
+                        </div>
+                        <input type="submit" value="ADD A BOOK" id="adding">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
