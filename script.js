@@ -1,9 +1,9 @@
 let myReadLibrary = [
-    {title: "Lord of Flies", author: "William Golding", pages: "167", status: true},
-    {title: "Book2", author: "Some Author", pages: "128", status: true}
+    {title: "Lord of the Flies", author: "William Golding", pages: "224", status: true},
+    {title: "Animal Farm", author: "George Orwell", pages: "128", status: true}
 ];
 let myWantLibrary = [
-    {title: "Book3", author: "Some Other", pages: "259", status: false}
+    {title: "A Clockwork Orange", author: "Anthony Burgess", pages: "192", status: false}
 ];
 
 const readField = document.querySelector('#read-container > .cards-container');
@@ -40,13 +40,17 @@ function createCard(book) {
     newAuthor.classList.add('card-author');
     newAuthor.textContent = book.author;
 
+    /*
     const newRemove = document.createElement('button');
     newRemove.classList.add('remove');
     newRemove.textContent = 'X';
+    */
 
     newCard.appendChild(newTitle);
     newCard.appendChild(newAuthor);
+    /*
     newCard.appendChild(newRemove);
+    */
     if (book.status === true) {
         readField.appendChild(newCard);
     }
@@ -85,10 +89,31 @@ function addBookToLibrary(event) {
 submitBtn = document.querySelector('#adding');
 submitBtn.addEventListener('click', addBookToLibrary, false);
 
-function removeBookFromLibrary() {
-    var removedCard = removeBtn.parentElement;
+/*function removeBookFromLibrary() {
+    const removedCard = removeBtn.parentElement;
     removedCard.parentElement.removeChild(removedCard);
-}
+}*/
 
-removeBth = document.querySelector('.remove');
-removeBtn.addEventListener('click', removeBookFromLibrary, false);
+/*
+const removeBtns = document.querySelectorAll('.remove');
+
+removeBtns.forEach((button) => {
+    button.addEventListener('click', function() {
+        console.log('bfiuebf');
+        const removedCard = button.parentElement;
+        console.log(removedCard.id);
+        for(let i = 0; i<myReadLibrary.length; i++){
+            if(myReadLibrary[i].id == card.id){
+                myReadLibrary.splice(i,1);
+                console.log(myReadLibrary[i]);
+            }
+        };
+        for(let i = 0; i<myWantLibrary.length; i++){
+            if(myWantLibrary[i].id == card.id){
+                myWantLibrary.splice(i,1);
+            }
+        };
+        displayBooks();
+    });
+});
+*/
